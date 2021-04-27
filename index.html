@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando JavaScript</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+        img{
+            margin-left: 570px;
+        }
+
+        button{
+            position: relative;
+            left:570px;
+            margin: 15px;
+            background-color: red;
+            border: 2px solid red;
+            color:white;
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Lâmpada</h1>
+
+    <img id="my-image" src="./img/lampada-desligada.jpg" alt="Lâmpada">
+    <br>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+
+    <script>
+
+        function light(turn){
+            let lampada;
+
+            if(turn == 0){
+                lampada = "./img/lampada-desligada.jpg"
+            }else{
+                lampada = "./img/lampada-ligada.jpg"
+            }
+            document.getElementById('my-image').src = lampada;
+        }
+
+    </script>
+
+</body>
+</html>
